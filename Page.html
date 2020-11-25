@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" href="css/styles.css">
+		<title>Hola mundo</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="#">
+		  	<img src="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="#">Features</a>
+		      <a class="nav-item nav-link" href="#">Pricing</a>
+		      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+		    </div>
+		  </div>
+		</nav>
+		<!-- contenido -->
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEditTravelModal">
+  Boton 1
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+  Boton 2
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
+  Boton 3
+</button>
+
+
+<!-- modal 1 -->
+<div class="modal fade" id="addEditTravelModal" tabindex="-1" role="dialog" aria-labelledby="Add travel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+    <div class="modal-content bg-dark text-white-50">
+      <div class="modal-header">
+        <h4 class="modal-title text-white" id="addEditTravelModalLabel"> </h4><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" id="addEditTravelFrm" novalidate>
+          <fieldset>
+            <legend>Datos evento</legend>
+            <div class="form-row">
+              <div class="form-group col-12"><input class="form-control" id="addEditTravelName" type="text" placeholder="Nombre" required="required" autocomplete="on" /></div>
+              <div class="form-group col-12"><textarea class="form-control" id="addEditTravelDesc" placeholder="Descripción" rows="2" required="required" style="resize: none;"></textarea></div>
+              <div class="col-12 col-md-6 mb-3 mb-md-1"><input class="form-control" id="addEditTravelPlace" type="text" placeholder="Lugar" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelDate" type="date" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelHour" type="time" required="required" autocomplete="on" /></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Datos de salida</legend>
+            <div class="form-row">
+              <div class="col-12 col-md-6 mb-3 mb-md-1"><input class="form-control" id="addEditTravelOutPlace" type="text" placeholder="Lugar de salida" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelOutDate" type="date" placeholder="Fecha de salida" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelOutHour" type="time" required="required" autocomplete="on" /></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Datos de regreso</legend>
+            <div class="form-row form-group">
+              <div class="col-12 col-md-6 mb-3 mb-md-1"><input class="form-control" id="addEditTravelReturnPlace" type="text" placeholder="Lugar de regreso" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelReturnDate" type="date" placeholder="Fecha de regreso" required="required" autocomplete="on" /></div>
+              <div class="col-6 col-md-3"><input class="form-control" id="addEditTravelReturnHour" type="time" placeholder="Hora de regreso" required="required" autocomplete="on" /></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Otros</legend>
+            <div class="form-row form-group">
+              <div class="input-group col-12 col-lg-4 mb-3 mb-lg-1">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><input id="addEditTravelRound" type="checkbox" aria-label="" required="required" /></div>
+                </div><label class="form-control" aria-label="Viaje redondo" for="addEditTravelRound">Viaje redondo</label>
+              </div>
+              <div class="input-group col-12 col-lg-4 mb-3 mb-lg-1">
+                <div class="input-group-prepend"><span class="input-group-text">$</span></div><input class="form-control" id="addEditTravelPriceInt" type="number" aria-label="Cantidad" min="0" placeholder="Precio del viaje" required="required" autocomplete="no" />
+                <div class="input-group-append"><span class="input-group-text">.</span></div><input class="input-group-text form-control w-25" id="addEditTravelPriceDec" type="number" aria-label="Decimal" min="0" value="0" required="required" autocomplete="no" style="flex:0 0 auto;" />
+              </div>
+              <div class="input-group col-12 col-lg-4 mb-3 mb-lg-1">
+                <div class="input-group-prepend"><span class="addEditTravelImageAddon input-group-text">Imagen</span></div>
+                <div class="custom-file"><input class="custom-file-input" id="addEditTravelImage" type="file" required="required" autocomplete="on" accept="image/*" /><label class="custom-file-label" for="addEditTravelImage" data-browse="Elegir"></label></div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Cerrar</button><button class="btn btn-info" id="doAddEditTravel" type="submit" form="addEditTravelFrm"> </button></div>
+    </div>
+  </div>
+</div>
+<!-- modal 1 -->
+<!-- modal 2 -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h4 class="modal-title">Iniciar sesión</h4><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" id="loginFrm" novalidate>
+            <div class="form-group"><input class="form-control" id="loginEmail" type="email" placeholder="Correo electrónico" required="required" autocomplete="on" /></div>
+            <div class="form-group"><input class="form-control" id="loginPassword" type="password" placeholder="Contraseña" required="required" autocomplete="on" /></div>
+          </form>
+        </div>
+        <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Cerrar</button><button class="btn btn-info" id="doLogin" type="submit" form="loginFrm">Entrar</button></div>
+    </div>
+  </div>
+</div>
+<!-- modal 2 -->
+<!-- modal 3 -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Registro" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h4 class="modal-title">Registro</h4><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" id="registerFrm" novalidate>
+          <div class="form-group"><input class="form-control" id="registerDisplayName" type="text" required="required" placeholder="Nombre" autocomplete="on" /></div>
+          <div class="form-group"><input class="form-control" id="registerEmail" type="text" required="required" placeholder="Correo electrónico" autocomplete="on" /></div>
+          <div class="form-group"><input class="form-control" id="registerPassword" type="password" required="required" placeholder="Contraseña" autocomplete="on" /><div class="invalid-feedback">Debe tener mínimo 8 caracteres con al menos una letra minúscula, una letra mayúscula, un número y un símbolo</div></div>
+          <div class="form-group"><input class="form-control" id="registerConfirmPassword" type="password" required="required" placeholder="Confirmar contraseña" autocomplete="on" /><div class="invalid-feedback">No coincide</div></div>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Cerrar</button><button class="btn btn-info" id="doRegister" type="submit" form="registerFrm">Registrar</button></div>
+    </div>
+  </div>
+</div>
+<!-- modal 3 -->
+
+		<!-- contenido -->
+		<script src="js/java.js"></script>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
