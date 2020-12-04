@@ -44,7 +44,7 @@
                         </g>
                     </svg>
                 </div>
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg dark:text-white">
+                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg dark:text-white p-6">
                     <h1>Ingenieria en sistemas computacionales</h1>
                     <h2>Alumno: Miguel Angel Muñiz Rosales</h2>
                 </div>
